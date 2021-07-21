@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+<title>index</title>
+</head>
+<body>
+<div class="card-columns">
+    <div class="container">
+        <div><h1 class="display-2">you are loged in as {{ username}}</h1></div>
+        <!-- <div><h1 class="display-3">and password as {{ password }} </h1></div> -->
+        
+
+        <div><a href="{{ url_for('logout') }}"><button type="button" class="btn btn-primary"> <i class="fa fa-backward" aria-hidden="true"></i> logout</button></a></div>
+        
+        
+        
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

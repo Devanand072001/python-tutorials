@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>login</title>
+</head>
+
+<body style="background-color: aqua;">
+    <div>
+        <div class="container" style="border: black;border-radius: 5%;">
+
+            <form style="background-color: rgb(166, 248, 248);" method="POST" action="{{ url_for('login') }}"
+                class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <dir>
+                    <div class="form-group">
+                        <label for="username">name</label>
+                        <input type="text" class="form-control" name="username" id="username" aria-describedby=""
+                            placeholder="">
+                        <small id="" class="form-text text-muted"></small>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                        <label for="password">Passoword</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="">
+                    </div>
+                </dir>
+                <!-- <dir>
+                    
+                    <span class="label">phone <i class="fa fa-phone" aria-hidden="true"></i> </span>
+                    
+                    <input  type="tel" name="phone" id="inputphone" class="form-control" value="" required="required"
+                        title="">
+                </dir> -->
+                <dir><button type="submit" class="btn btn-primary">Login</button></dir>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

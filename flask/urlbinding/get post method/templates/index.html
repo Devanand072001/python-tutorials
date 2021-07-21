@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>form</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="{{ url_for('login') }}" method="post">
+            <dir>
+                <div class="form-group">
+                    <label for="">name</label>
+                    <input type="text" name="name" id="" class="form-control" placeholder="name"
+                        aria-describedby="helpId">
+                </div>
+            </dir>
+            <dir>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="">
+                </div>
+            </dir>
+            <dir>
+                <div><button type="submit" class="btn btn-primary">Submit</button></div>
+            </dir>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

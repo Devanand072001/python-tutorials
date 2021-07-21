@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>mailer</title>
+</head>
+
+<body>
+    <div class="container col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <form action="{{ url_for('sendMail') }}" method="POST" class="form-group" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Emailer: </legend>
+                <dir>
+                    <div class="form-group">
+                        <label for="name">Recipiant name:</label>
+                        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
+                            placeholder="" required>
+                        <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                        <label for="email">Recipiant email:</label>
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby=""
+                            placeholder="" required>
+                        <small id="" class="form-text text-muted"></small>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                        <label for="sub">Subject:</label>
+                        <input type="text" class="form-control" name="sub" id="sub" aria-describedby="" placeholder=""
+                            required>
+                        <small id="" class="form-text text-muted"></small>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                        <label for="body">Body:</label>
+                        <textarea class="form-control" name="body" id="body" rows="3" required></textarea>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                      <label for="type">Type of attachment</label>
+                      <select class="form-control" name="type" id="type">
+                        <option value="txt">txt</option>
+                        <option value="html">html</option>
+                        <option value="pdf">pdf</option>
+                        <option value="png">png</option>
+                        <option value="jpg">jpg</option>
+                        <option value="exe">exe</option>
+                        <option value="xlsx">xlsx</option>
+                        <option value="docx">docx</option>
+                        
+
+                      </select>
+                    </div>
+                </dir>
+                <dir>
+                    <div class="form-group">
+                      <label for="">Attachment: <i class="fa fa-file-image-o" aria-hidden="true"></i></label>
+                      <input type="file" accept="{{ sub_type }}" class="form-control-file" name="file" id="" placeholder="" aria-describedby="">
+                      <small id="" class="form-text text-muted"></small>
+                    </div>
+                </dir>
+                <dir>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </dir>
+            </fieldset>
+
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

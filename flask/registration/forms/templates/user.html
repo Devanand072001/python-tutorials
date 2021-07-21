@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block user_data %}
+   <table class="table">
+       {% for i,j in result.items() %}
+           
+       {% endfor %}
+      
+       <tbody>
+           <tr>
+               <td scope="row">{{ i }}</td>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr>
+               <td scope="row">{{ j }}</td>
+               <td></td>
+               <td></td>
+           </tr>
+       </tbody>
+   </table> 
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee</title>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+}
+    </style>
+</head>
+
+<body style="align-items: center;">
+    <!-- <center> -->
+        <div>
+            <h3>Details of {{emp1.name}}</h3>
+
+            {% for i,j in emp1.__dict__.items(): %}
+            <table border="1",style="width:100%">
+                <tr>
+                    <th>{{i}}</th>
+                    
+                    <td>{{j}}</td>
+                </tr>
+                
+                
+            </table>
+            <!-- <p>{{i}} : {{j}}</p> -->
+            {% endfor %}
+
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h3>Details of {{emp2.name}}</h3>
+
+            {% for i,j in emp2.__dict__.items(): %}
+            <p>{{i}} : {{j}}</p>
+            {% endfor %}
+
+        </div>
+    <!-- </center> -->
+</body>
+
+</html>

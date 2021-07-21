@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <title>Movie Flix</title>
+    <style>
+        .container {
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 30px black, -5px -5px 30px black;
+        }
+
+        .table {
+            border: 1px solid magenta;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+            box-shadow: 3px 3px 10px magenta, -3px -3px 10px magenta;
+        }
+
+        .search {
+            outline: none;
+            border-radius: 15px;
+            border: 0px none;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            padding: 5px;
+            text-align: center;
+            text-align: center;
+            width: 500px;
+        }
+
+        .search:focus {
+            transform: scaleX(1.25);
+            box-shadow: 3px 3px 6px wheat, -3px -3px 6px wheat;
+            transition: 200ms;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px)  {
+            .search {
+                width: 150px;
+            }
+            .search:focus{
+                transform: scaleX(1.1);
+            }
+        }
+       
+        /* @media screen and (max-width: 999px) {
+            .search {
+                width: 350px;
+            }
+            .search:focus{
+                transform: scaleX(1.1);
+            }
+        } */
+    </style>
+</head>
+
+<body style="background-color: darkmagenta;">
+    <br>
+    <br><br>
+    <div class="container col-6" style="background-color: rgb(255, 172, 255);">
+        <div>
+            <form method="POST" action='{{ url_for("index") }}'>
+                <!-- <input type="search" placeholder="Search by Movie name, Director, Year released" name="search"
+                    class="form-group form-control"> -->
+                <input type="search" placeholder="Search by Movie name, Director, Year released" name="search"
+                    class="search form-control form-group"><br>
+                
+                <button type="submit" value="submit" class="btn btn-primary form-group">
+                    Search <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <br>
+        <div style="background-color: rgb(255, 215, 253);">
+            <table class="table table-bordered table-inverse table-responsive">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Movie Id</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Year released</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for movie in db_data %}
+                    <tr>
+                        <td>{{ movie[0] }}</td>
+                        <td>{{ movie[1] }}</td>
+                        <td>{{ movie[2] }}</td>
+                        <td>{{ movie[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
